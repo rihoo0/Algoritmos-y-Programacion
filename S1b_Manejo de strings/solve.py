@@ -20,8 +20,22 @@ def solve(input_list):
         - No imprimir resultados dentro de esta función.
         - Devolver un número entero.
     """
+    ints_lines = []
 
+    for line in input_list:
+        char_per_line = []
+        for char in line:
+            if char.isdigit():
+                char_per_line.append(char)
+        if len(char_per_line) == 1:
+            char_per_line.append(char_per_line[0])
+            ints_lines.append(int(char_per_line[0] + char_per_line[-1]))
+        elif len(char_per_line) == 0:
+            ints_lines.append(0)
+        else:
+            ints_lines.append(int(char_per_line[0] + char_per_line[-1]))
+        char_per_line = []
     
-    return sum()
-    pass
+    return sum(ints_lines)
+
 
