@@ -21,4 +21,27 @@ def solve(input_list):
         - No imprimir resultados dentro de esta función.
         - Devolver un entero con la suma total.
     """
-    pass
+    num_dict = {"one":1, "two":2, "three":3, "four":4, "five":5, "six":6, "seven":7, "eight":8, "nine":9, "zero":0}
+    solution = []
+    
+    for line in input_list:
+        
+        char_per_line = []
+        number = ""
+
+        for char in line:
+            number += char
+
+            for key, val in num_dict.items():
+
+                if number.endswith(key):
+                    char_per_line.append(val)
+
+            if char.isdigit():
+                char_per_line.append(int(char))
+
+        solution.append(int(str(char_per_line[0]) + str(char_per_line[-1])))
+        char_per_line = []
+
+    return sum(solution)
+
