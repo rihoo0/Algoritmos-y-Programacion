@@ -8,7 +8,7 @@
 
 from utils import *
 
-test_file    = None
+test_file    = "./S2b_Grafo no dirigido (con MiniGraph)/test1.txt"
 input_source = open_test_file (test_file)
 
 # ----------------------------------------------------------------

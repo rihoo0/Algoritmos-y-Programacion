@@ -28,11 +28,19 @@ def build_graph(edges_list, num_nodes, num_edges):
     """
 
     # Crea aquí un grafo no dirigido con nx.Graph().
+    graph = nx.Graph()
 
     # Añade aquí todos los vértices desde 1 hasta num_nodes.
-
+    for i in range(num_nodes):
+        graph.add_node(i + 1)
+    
     # Recorre edges_list, separa cada línea en dos extremos u y v,
+    for edge in edges_list:
+        edge_n = []
+        for n in edge.split():
+            edge_n.append(int(n))
+        graph.add_edge(edge_n[0], edge_n[1])
     # conviértelos a enteros y añade la arista correspondiente.
 
     # Devuelve el grafo construido.
-    pass
+    return graph
