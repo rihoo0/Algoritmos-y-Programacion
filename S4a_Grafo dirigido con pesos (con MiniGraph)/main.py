@@ -8,7 +8,7 @@
 
 from utils import *
 
-test_file    = None
+test_file    = "./S4a_Grafo dirigido con pesos (con MiniGraph)/test.txt"
 input_source = open_test_file (test_file)
 
 # ----------------------------------------------------------------
@@ -19,7 +19,7 @@ first_line = get_line(input_source).split()
 num_nodes  = int(first_line[0])
 num_edges  = int(first_line[1])
 edges_list = get_n_lines(input_source, num_edges)
-
+    
 graph = build_digraph_with_weights(edges_list, num_nodes, num_edges)
 
 print("Number of nodes: " + str(graph.number_of_nodes()))
