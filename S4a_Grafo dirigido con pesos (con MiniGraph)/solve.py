@@ -26,5 +26,3 @@ def build_digraph_with_weights(edges_list, num_nodes, num_edges):
         graph.add_edge(int(nodes[0]), int(nodes[1]), weight=int(nodes[2]))
 
     return graph
-
-papas

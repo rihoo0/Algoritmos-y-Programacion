@@ -8,7 +8,7 @@
 
 from utils import *
 
-test_file    = None
+test_file    = "./S4b_Grafos (DFS)_ Topological sort (recursivo e iterativo )/test.txt"
 input_source = open_test_file (test_file)
     
 # ----------------------------------------------------------------

@@ -30,10 +30,20 @@ def dfs_topological_sort(graph):
         nonlocal N
         #  1. Añade código aqui
         #  ...
-        
-        return
+        for i in graph.neighbors(u):
+            if i not in visibleNodes:
+                visibleNodes.add(i)
+                dfs(i)
+
+        order[u] = N
+        N -= 1
+        return 
 
     #  2. Añade código también aqui
     #  ...
-
+    for i in range(1, graph.number_of_nodes() + 1):
+        if i not in visibleNodes:
+            visibleNodes.add(i)
+            dfs(i)
+            
     return order
